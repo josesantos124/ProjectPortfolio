@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jose Santos - Portfolio</title>
+
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Intro section */
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1, p {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation-delay: 0.5s;
+    }
+
+    .intro p {
+      font-size: 1.5rem;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* About section */
+    .about {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    /* Projects section */
+    .projects {
+      min-height: 100vh;
+      padding: 60px 20px;
+      background-color: #111;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .project {
+      background: #222;
+      border-radius: 12px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .project.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 20px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .project h3 {
+      margin: 10px 0;
+    }
+
+    .tech {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      background: #ff9800;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Intro -->
+  <section class="intro">
+    <h1>Jose Santos</h1>
+    <p>Aspiring Degree Apprentice</p>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <p>
+      Ambitious and technically driven software developer currently studying a Level 4 Certificate of Higher Education in Software Development, with a strong desire to progress into a Degree Apprenticeship. 
+Experienced in building complex projects, such as fully functioning games and websites, using a variety of programming languages. These projects have created a strong foundation of programming principles, database design, and problem solving. 
+
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-list">
+
+      <!-- Casino -->
+      <a href="https://github.com/josesantos124/TheJackofHeartsCasino" target="_blank" class="project">
+        <img src="Jack of Hearts Cover Pic.PNG" alt="The Jack of Hearts Casino">
+        <div class="project-content">
+          <h3>The Jack of Hearts Casino</h3>
+          <p>
+            A Python-based virtual casino designed to explore probability, game logic,
+            and ethical software design around gambling addiction.
+          </p>
+          <p class="tech">🐍 Python • Game Logic • OOP</p>
+        </div>
+      </a>
+
+      <!-- Job Advert Website -->
+      <a href="https://github.com/josesantos124/HotBeansJobAdvertisements" target="_blank" class="project">
+        <img src="Hot Beans Cover Pic.png" alt="Hot Beans Job Advertisements">
+        <div class="project-content">
+          <h3>Hot Beans Job Advertisements</h3>
+          <p>
+            A responsive front-end recruitment website built using HTML, CSS, and JavaScript,
+            focusing on layout, accessibility, and user experience.
+          </p>
+          <p class="tech">🌐 HTML • CSS • JavaScript</p>
+        </div>
+      </a>
+
+      <!-- Jumpshot -->
+      <a href="https://github.com/josesantos124/Jumpshot" target="_blank" class="project">
+        <img src="Jumpshot Cover Pic.PNG" alt="Jumpshot Game">
+        <div class="project-content">
+          <h3>Jumpshot</h3>
+          <p>
+            An independently developed 2D platformer featuring shooting mechanics,
+            gravity, enemy behaviour, and traversal systems.
+          </p>
+          <p class="tech">🎮 Python • Game Development • Physics</p>
+        </div>
+      </a>
+
+      <!-- Primary School Backend -->
+      <a href="https://github.com/josesantos124/StAlphonsusRCPrimarySchool" target="_blank" class="project">
+        <img src="St Alphonsus Cover Pic.png" alt="Primary School Backend Website">
+        <div class="project-content">
+          <h3>St Alphonsus RC Primary School</h3>
+          <p>
+            A backend-driven website developed for a primary school,
+            handling content management and data processing with a focus on reliability and security.
+          </p>
+          <p class="tech">🗄️ Backend • PHP • SQL</p>
+        </div>
+      </a>
+
+      <!-- Cinema Booking System -->
+      <a href="https://github.com/josesantos124/CinemaHub" target="_blank" class="project">
+        <img src="Cinema Booking Cover Pic.PNG" alt="Cinema Booking System">
+        <div class="project-content">
+          <h3>CinemaHub</h3>
+          <p>
+            A collaborative software design and development project implementing
+            a cinema booking system, involving system modelling and the Software Development Life Cycle.
+          </p>
+          <span class="badge">🚧 In Progress</span>
+          <p class="tech">🎬 Software Design • Team Project • Python</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <script>
+    // Fade in projects on scroll
+    const projects = document.querySelectorAll('.project');
+
+    function showOnScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+      projects.forEach(project => {
+        const boxTop = project.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          project.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showOnScroll);
+    window.addEventListener('load', showOnScroll);
+  </script>
+
+</body>
+</html>
